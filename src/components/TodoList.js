@@ -4,25 +4,25 @@ import Icon from "react-native-vector-icons/MaterialIcons";
 
 export default function TodoList(props) {
   return (
-    <ScrollView>
+    
     <View style={styles.listTile}>
       <Icon
         name={props.todo.isChecked ? "check-circle" : "radio-button-unchecked"}
         style={styles.leading}
         size={20}
-        color="blue"
+        color="gray"
         onPress={() => props.checkTodo(props.todo.key)}
       />
+    
       <Text style={styles.title}>{props.todo.name}</Text>
       <Icon
         name="delete"
         style={styles.trailing}
         size={20}
-        color="blue"
+        color="red"
         onPress={() => props.deleteTodo(props.todo.key)}
       />
     </View>
-    </ScrollView>
   );
 }
 
